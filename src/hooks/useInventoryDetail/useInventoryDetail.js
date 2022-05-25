@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const usePartsDetail = () => {
+const useInventoryDetail = inventoryId => {
     const [inventory, setInventory] = useState({});
 
     useEffect(() => {
@@ -12,4 +12,4 @@ const usePartsDetail = () => {
     return [inventory];
 };
 
-export default usePartsDetail;
+export default useInventoryDetail;

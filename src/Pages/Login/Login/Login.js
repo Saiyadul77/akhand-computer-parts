@@ -1,96 +1,125 @@
-import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import SocialLogin from '../SocialLogin/SocialLogin';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Loading from '../../Loading/Loading';
-import axios from 'axios';
+import { useForm } from "react-hook-form";
+import Loading from '../../Shared/Loading/Loading';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const navigate = useNavigate();
-    const location = useLocation();
-
-
-    let from = location.state?.from?.pathname || "/";
-
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
+        user1,
+        loading1,
+        error1,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
-    if (loading || sending) {
+    useEffect(() => {
+        if (user || user1) {
+            navigate(from, { replace: true });
+        }
+    }, [user, user1, from, navigate])
+
+    if (loading || loading1) {
         return <Loading></Loading>
     }
 
-    if (user) {
-        // navigate(from, { replace: true });
+
+
+    let signInError;
+    if (error || error1) {
+        return (
+            <div>
+                signInError = <p>Error: {error.message || error1.message}</p>
+            </div>
+        );
     }
 
-    let errorElement;
-    if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message} </p>
+    const onSubmit = data => {
+        signInWithEmailAndPassword(data.email, data.password)
+        console.log(data);
     }
-
-    const handleSubmit = async event => {
-        event.preventDefault();
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
-        await signInWithEmailAndPassword(email, password)
-        const {data}= await axios.post('https://mighty-peak-83408.herokuapp.com/login', {email});
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
-    }
-
-    const navigateRegister = (event) => {
-        event.preventDefault();
-        navigate('/register');
-    }
-
-    const navigateResetPassword = async () => {
-        const email = emailRef.current.value;
-
-        if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
-        }
-        else {
-            toast('Please enter your email')
-        }
-
-    }
-
     return (
-        <div className='register-form'>
-            <h1 className='text-teal-500 text-3xl text-center my-3'>Login</h1>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                </Form.Group>
+        <div className='flex h-screen justify-center items-center'>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="text-center text-2xl font-bold">Login</h2>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
+                    <form onSubmit={handleSubmit(onSubmit)}>
 
-                <Button variant="primary" type="submit">
-                    Login
-                </Button>
-            </Form>
-            {errorElement}
-            <p>New Member? <Link to='/register' className='text-teal-500 text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
-            <p>Forget Password? <button className='text-teal-500 text-decoration-none' onClick={navigateResetPassword}>Rest Password</button></p>
-            <SocialLogin></SocialLogin>
-            <ToastContainer />
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+
+                            </label>
+                            <input
+                                type="email"
+                                placeholder="Enter Your Email"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("email", {
+                                    required: {
+                                        value: true,
+                                        message: 'Email is required'
+                                    },
+                                    pattern: {
+                                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                        message: 'Please valid email'
+                                    }
+                                })}
+
+                            />
+                            <label className="label">
+                                {errors.email?.type === 'required' && <span className="label-text-alt text-red-800">{errors.email.message}</span>}
+                                {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-800">{errors.email.message}</span>}
+
+                            </label>
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+
+                            </label>
+                            <input
+                                type="password"
+                                placeholder="Enter Your valid paasword"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("password", {
+                                    required: {
+                                        value: true,
+                                        message: 'Password is required'
+                                    },
+                                    minLength: {
+                                        value: 6,
+                                        message: 'Please valid password'
+                                    }
+                                })}
+
+                            />
+                            <label className="label">
+                                {errors.password?.type === 'required' && <span className="label-text-alt text-red-800">{errors.password.message}</span>}
+                                {errors.password?.type === 'pattern' && <span className="label-text-alt text-red-800">{errors.password.message}</span>}
+
+                            </label>
+                        </div>
+
+                        {signInError}
+
+                        <input className='w-full max-w-xs btn btn-outline btn-accent' value='Login' type="submit" />
+                    </form>
+
+                    <p><small>New to member <Link className='text-primary' to="/register">Create New Account</Link></small></p>
+                    <div className="divider">OR</div>
+                    <button
+                        onClick={() => signInWithGoogle()}
+                        className="btn btn-outline btn-accent"
+                    >Continue with Google</button>
+                </div>
+            </div>
         </div>
     );
 };
