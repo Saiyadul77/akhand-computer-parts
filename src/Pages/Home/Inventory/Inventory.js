@@ -13,11 +13,11 @@ const Inventory = () => {
     }, [])
     return (
         <div id="inventory">
-            <h1 className='text-center text-primary mt-5'>Inventory Product</h1>
+            <h1 className='text-2xl text-center text-primary my-5'>Latest Computer Parts</h1>
             <div className='items-container'>
 
                 {
-                    items.slice(0, 6).map(item => <Item key={item._id}
+                    items.slice(0, 3).map(item => <Item key={item._id}
                         item={item}
                     ></Item>)
                 }

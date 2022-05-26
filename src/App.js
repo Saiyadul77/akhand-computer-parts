@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageItem from './Pages/ManageItem/ManageItem';
+import Footer from './Pages/Shared/Footer/Footer';
 // import PartsDetail from './Pages/PartsDetail/PartsDetail';
 import Header from './Pages/Shared/Header/Header';
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/register' element={<Register/>}></Route>
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
