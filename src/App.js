@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
+import BusinessSummary from './Pages/Home/BusinessSummary/BusinessSummary';
 import Home from './Pages/Home/Home/Home';
 import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
 import Login from './Pages/Login/Login/Login';
@@ -31,6 +32,7 @@ function App() {
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path="/about" element={<About />} />
+        <Route path='/business' element={<BusinessSummary></BusinessSummary>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

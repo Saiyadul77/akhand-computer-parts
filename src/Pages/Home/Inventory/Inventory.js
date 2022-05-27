@@ -13,7 +13,7 @@ const Inventory = () => {
     }, [])
     return (
         <div id="inventory">
-            <h1 className='text-2xl text-center text-primary my-5'>Latest Computer Parts</h1>
+            <h1 className='text-5xl text-center text-primary mb-5'>Latest Computer Parts</h1>
             <div className='items-container'>
 
                 {

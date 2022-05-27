@@ -19,23 +19,23 @@ const RequireAuth = ({ children }) => {
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
     // console.log(user)
-    if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
-        return <div className='text-center'>
-            <h3 className='text-danger'>Your email is not verified</h3>
-            <h5 className='text-success'>Please verify your email</h5>
-            <button
-                className='btn btn-primary'
-                onClick={async () => {
-                    await sendEmailVerification();
-                    toast('Sent email');
-                }}
-            >
-                Send verification email again
-            </button>
-            <ToastContainer></ToastContainer>
-        </div>
+    // if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
+    //     return <div className='text-center'>
+    //         <h3 className='text-danger'>Your email is not verified</h3>
+    //         <h5 className='text-success'>Please verify your email</h5>
+    //         <button
+    //             className='btn btn-primary'
+    //             onClick={async () => {
+    //                 await sendEmailVerification();
+    //                 toast('Sent email');
+    //             }}
+    //         >
+    //             Send verification email again
+    //         </button>
+    //         <ToastContainer></ToastContainer>
+    //     </div>
 
-    }
+    // }
 
     return children;
 };

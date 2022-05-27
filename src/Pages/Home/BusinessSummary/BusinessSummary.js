@@ -43,7 +43,7 @@ const BusinessSummary = () => {
                         <div class="stat-title text-green-500 text-xl text-center font-bold">Parts</div>
                         <h3 className='text-2xl justify-center text-center text-orange-500 font-bold'><MdComputer /> </h3>
                         <div class="stat-value">100+</div>
-
+                        <div class="stat-desc">All computer parts are available</div>
                     </div>
 
                 </div>
