@@ -1,18 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Item.css'
 
-const Item = ({ item }) => {
-    const { _id, name, img, description, price, availableQuantity, minimumOrder } = item;
-    const navigate = useNavigate();
-
-    const navigateToServiceDetail = id => {
-        navigate(`/inventory/${id}`);
-    }
+const Item = ({ item, setProduct }) => {
+    const {name, img, description, price, availableQuantity, minimumOrder } = item;
+    
     return (
         <div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card lg:max-w-lg bg-base-100 shadow-xl">
                     <figure><img src={img} alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">{name}</h2>
@@ -21,7 +16,11 @@ const Item = ({ item }) => {
                         <p>Available Quantity: {availableQuantity}</p>
                         <p>Minimum Order: {minimumOrder}</p>
                         <div class="card-actions justify-end">
-                            <button onClick={() => navigateToServiceDetail(_id)}class="btn btn-primary">Buy Now</button>
+                            <label
+                                disabled={availableQuantity < 6}
+                                onClick={() => setProduct(item)}
+                                for="my-modal-6"
+                                class="btn btn-primary">Buy Now</label>
                         </div>
                     </div>
                 </div>
