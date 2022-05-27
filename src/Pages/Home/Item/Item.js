@@ -6,9 +6,9 @@ const Item = ({ item, setProduct }) => {
     
     return (
         <div>
-            <div>
+            <div className='text-center sm:text-left'>
                 <div class="card lg:max-w-lg bg-base-100 shadow-xl">
-                    <figure><img src={img} alt="Shoes" /></figure>
+                    <figure><img class="h-48 w-full object-cover md:h-full md:w-48 lg:h-full lg:w-96" src={img} alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">{name}</h2>
                         <p>{description}</p>

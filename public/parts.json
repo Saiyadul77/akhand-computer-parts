@@ -1,35 +1,31 @@
 [
     {
         "id": 1,
-        "name": "The Ottomans: Khans, Caesars, and Caliphs",
-        "price": "25",
-        "description": "The Ottoman Empire has long been depicted as the Islamic, Asian antithesis of the Christian, European West. But the reality was starkly different: the Ottomans multiethnic, multilingual, and multireligious domain reached deep into Europe's heart.",
-        "img": "https://i.ibb.co/4PX2kLk/ottomas.jpg",
-        "minimumOrder": "6",
-        "availableQuantity": "6",
-        "supplier": "Asadul Amin"
-        
+        "name": "Gigabyte KM6300 Combo USB Keyboard & Mouse",
+        "price": "750",
+        "description": "Type Wired Keyboard & Mouse Combo, Lighting No,Interface USB, Mouse, Touchpad Keyboard & Mouse,Mechanical (Key) No",
+        "img": "https://i.ibb.co/MfS78fr/keyboard.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "500" 
     },
     {
         "id": 2,
-        "name": "The Ottomans: Khans, Caesars, and Caliphs",
-        "price": "25",
-        "description": "The Ottoman Empire has long been depicted as the Islamic, Asian antithesis of the Christian, European West. But the reality was starkly different: the Ottomans multiethnic, multilingual, and multireligious domain reached deep into Europe's heart.",
-        "img": "https://i.ibb.co/4PX2kLk/ottomas.jpg",
-        "minimumOrder": "6",
-        "availableQuantity": "1000",
-        "supplier": "Asadul Amin"
-        
+        "name": "Intel 3rd Gen Sandy Bridge E Core i7 3820 Desktop Processor",
+        "price": "12500",
+        "description": "Core 4, CPU Cache 10MB, Generation 3rd, Base Frequency 3.60GHz, Processor Type. Core i7, Turbo Frequency Max. 3.80GHz",
+        "img": "https://i.ibb.co/kSwmcRq/processor.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "100"
     },
     {
         "id": 3,
-        "name": "The Ottomans: Khans, Caesars, and Caliphs",
-        "price": "25",
-        "description": "The Ottoman Empire has long been depicted as the Islamic, Asian antithesis of the Christian, European West. But the reality was starkly different: the Ottomans multiethnic, multilingual, and multireligious domain reached deep into Europe's heart.",
-        "img": "https://i.ibb.co/4PX2kLk/ottomas.jpg",
-        "minimumOrder": "6",
-        "availableQuantity": "1000",
-        "supplier": "Asadul Amin"
+        "name": "Gigabyte GA-H61M-DS2 3rd Gen Intel Motherboar",
+        "price": "7800",
+        "description": "Chipset Intel H61, Generation 3rd, Memory Max. 16GB, Memory Slot 2, Supported CPU Intel Core i7 / i5/ i3/ Pentium/ Celeron processors, Sockets Supported LGA1155",
+        "img": "https://i.ibb.co/Ldv4bd5/motherboard.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "150"
+        
         
     },
     {
