@@ -4,6 +4,7 @@ import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../../hooks/useToken/useToken';
 // import { async } from '@firebase/util';
 
 const Register = () => {
@@ -18,14 +19,15 @@ const Register = () => {
 
     const [updateProfile, updating, error2] = useUpdateProfile(auth);
     const navigate = useNavigate();
+    const [token]  = useToken(user || user1);
 
 
     if (loading || loading1 || updating) {
         return <Loading></Loading>
     }
 
-    if (user || user1) {
-        console.log(user)
+    if (token) {
+        navigate('/inventory');
     }
 
     let signInError;
