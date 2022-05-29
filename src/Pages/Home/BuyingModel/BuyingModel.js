@@ -24,7 +24,7 @@ const BuyingModel = ({ product, setProduct }) => {
                     customerName: user.displayName,
                     phone: event.target.phone.value
                 }
-                fetch('http://localhost:5000/booking', {
+                fetch('https://secret-fjord-21413.herokuapp.com/booking', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

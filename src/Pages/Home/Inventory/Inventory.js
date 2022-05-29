@@ -8,7 +8,7 @@ const Inventory = () => {
     const [product, setProduct]= useState(null)
 
     useEffect(() => {
-        const url=`http://localhost:5000/service`
+        const url=`https://secret-fjord-21413.herokuapp.com/service`
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
