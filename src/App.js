@@ -23,6 +23,8 @@ import Users from './Pages/Dashboard/Admin/Users';
 import Blogs from './Pages/Blogs/Blogs';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import NotFound from './Pages/NotFound/NotFound';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
+import AddItem from './Pages/AddItem/AddItem';
 
 
 
@@ -57,6 +59,8 @@ function App() {
           <Route path='review' element={<MyReview></MyReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='admin' element={<Users></Users>}></Route>
+          <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
+          <Route path='addItem' element={<AddItem></AddItem>}></Route>
         </Route>
 
         <Route path='/login' element={<Login />}></Route>
