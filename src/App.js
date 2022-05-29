@@ -22,6 +22,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Admin/Users';
 import Blogs from './Pages/Blogs/Blogs';
 import Portfolio from './Pages/Portfolio/Portfolio';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -66,6 +67,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/business' element={<BusinessSummary></BusinessSummary>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

@@ -1,5 +1,35 @@
 # Getting Started with Create React App
 
+
+## I have completed my assignment [Welcome to Akhand Computer Parts](https://akhand-computer-parts.web.app/) 
+
+Different Features and Functionality :<br><br>
+         * My webpage name is Akhand Computer Parts. <br>
+         * I have used react router. <br>
+         * Also I have used firebase. <br>
+         * Also I have used React Firebase Hooks - Auth .<br>
+         * Also I have used react-toastify - npm <br>
+         * Home page will have a header, banner, items, footer and extra two routes. <br>
+         * Here have Login and registration system <br>
+         * Also have Manage Item, Add Item, My Item but all are secured <br>
+         * Login system using email and password, google sign in, <br>
+         * Also create a 404 page. <br> 
+         * Also have many more other things. <br><br>
+
+Technologies: <br> <br>
+        * Visual Studio
+        * Tailwind css
+        * DaisyUi <br>
+        * React Router <br>
+        * React Query
+        * React app <br>
+        * Firebase <br>
+        * React Firebase hooks <br>
+        * React toastify <br>
+        * Heroku for server
+        * Many more technology used
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
