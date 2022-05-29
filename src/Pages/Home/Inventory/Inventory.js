@@ -8,7 +8,7 @@ const Inventory = () => {
     const [product, setProduct]= useState(null)
 
     useEffect(() => {
-        const url=`parts.json`
+        const url=`http://localhost:5000/service`
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));

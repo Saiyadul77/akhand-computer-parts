@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Gigabyte KM6300 Combo USB Keyboard & Mouse",
         "price": "750",
-        "description": "Type Wired Keyboard & Mouse Combo, Lighting No,Interface USB, Mouse, Touchpad Keyboard & Mouse,Mechanical (Key) No",
+        "description": "Type Wired Keyboard & Mouse Combo, Lighting No,Interface USB, Mouse, Touchpad Keyboard & Mouse,Mechanical (Key) No.",
         "img": "https://i.ibb.co/MfS78fr/keyboard.webp",
         "minimumOrder": "2",
         "availableQuantity": "500" 
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Intel 3rd Gen Sandy Bridge E Core i7 3820 Desktop Processor",
         "price": "12500",
-        "description": "Core 4, CPU Cache 10MB, Generation 3rd, Base Frequency 3.60GHz, Processor Type. Core i7, Turbo Frequency Max. 3.80GHz",
+        "description": "Core 4, CPU Cache 10MB, Generation 3rd, Base Frequency 3.60GHz, Processor Type. Core i7, Turbo Frequency Max. 3.80GHz.",
         "img": "https://i.ibb.co/kSwmcRq/processor.webp",
         "minimumOrder": "2",
         "availableQuantity": "100"
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "Gigabyte GA-H61M-DS2 3rd Gen Intel Motherboar",
         "price": "7800",
-        "description": "Chipset Intel H61, Generation 3rd, Memory Max. 16GB, Memory Slot 2, Supported CPU Intel Core i7 / i5/ i3/ Pentium/ Celeron processors, Sockets Supported LGA1155",
+        "description": "Chipset Intel H61, Generation 3rd, Memory Max. 16GB, Memory Slot 2, Supported CPU Intel Core i7 / i5/ i3/ Pentium/ Celeron processors, Sockets Supported LGA1155.",
         "img": "https://i.ibb.co/Ldv4bd5/motherboard.webp",
         "minimumOrder": "2",
         "availableQuantity": "150"
@@ -30,35 +30,64 @@
     },
     {
         "id": 4,
-        "name": "The Ottomans: Khans, Caesars, and Caliphs",
-        "price": "25",
-        "description": "The Ottoman Empire has long been depicted as the Islamic, Asian antithesis of the Christian, European West. But the reality was starkly different: the Ottomans multiethnic, multilingual, and multireligious domain reached deep into Europe's heart.",
-        "img": "https://i.ibb.co/4PX2kLk/ottomas.jpg",
-        "minimumOrder": "6",
-        "availableQuantity": "1000",
-        "supplier": "Asadul Amin"
-        
+        "name": "Gigabyte 8GB DDR4 2666MHz Black Heatsink Desk ",
+        "price": "3050",
+        "description": "RAM Type DDR4, Number of Pin 288 Pin, Bus Speed(MHz) 2666MHz, Capacity (GB/TB) 8GB.",
+        "img": "https://i.ibb.co/Q8SGmgX/ram.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "200"
     },
     {
         "id": 5,
-        "name": "The Ottomans: Khans, Caesars, and Caliphs",
-        "price": "25",
-        "description": "The Ottoman Empire has long been depicted as the Islamic, Asian antithesis of the Christian, European West. But the reality was starkly different: the Ottomans multiethnic, multilingual, and multireligious domain reached deep into Europe's heart.",
-        "img": "https://i.ibb.co/4PX2kLk/ottomas.jpg",
-        "minimumOrder": "6",
-        "availableQuantity": "1000",
-        "supplier": "Asadul Amin"
-        
+        "name": "Transcend TS8XDVDS-K Slim External Black DVD",
+        "price": "3750",
+        "description": "Type External DVD Writer, Read Speed (CD) 24X, Read Speed (DVD) 8X, Write Speed (CD) 24X, Write Speed (DVD) 8X.",
+        "img": "https://i.ibb.co/vPmNsqg/optical.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "300"
     },
     {
         "id": 6,
-        "name": "The Ottomans: Khans, Caesars, and Caliphs",
-        "price": "25",
-        "description": "The Ottoman Empire has long been depicted as the Islamic, Asian antithesis of the Christian, European West. But the reality was starkly different: the Ottomans multiethnic, multilingual, and multireligious domain reached deep into Europe's heart.",
-        "img": "https://i.ibb.co/4PX2kLk/ottomas.jpg",
-        "minimumOrder": "6",
-        "availableQuantity": "1000",
-        "supplier": "Asadul Amin"
+        "name": "(Bundle With PC) Gigabyte GeForce GTX 1050 Ti",
+        "price": "22000",
+        "description": "Chipset NVIDIA GeForce, HDMI Port 3, Capacity (GB/TB) 4GB, Graphics Resolution Max. 4096x2160, Multi Display Capability Quad Display.",
+        "img": "https://i.ibb.co/PCYy8NT/graphics.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "100"
+        
+        
+    },
+    {
+        "id": 7,
+        "name": "Gigabyte P650B 650W 80 Plus Bronze Certified ",
+        "price": "5550",
+        "description": "Type ATX 12V v2.31, Efficiency 89% Efficiency, PSU Category Non Modular, Maximum Power 650 Watt, 80 Plus Rating 80 Plus Bronze",
+        "img": "https://i.ibb.co/mHH55hk/power.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "100"
+        
+        
+    },
+    {
+        "id": 8,
+        "name": "Cooler Master MASTERBOX MB530P Gaming Desktop ...",
+        "price": "10050",
+        "description": "Case Type Mid Tower, Optical Drive Bay No, Cooling Fan (Built-In) 4.",
+        "img": "https://i.ibb.co/ZYWDVbv/casing.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "100"
+        
+        
+    },
+    {
+        "id": 9,
+        "name": "Deepcool UD551 A RGB Air CPU Cooler #R-UD551- ",
+        "price": "1550",
+        "description": "Fan Speed 1800 RPM, LED Color ARGB, Cooler Type Air CPU Cooler, Supported Socket AMD AM4.",
+        "img": "https://i.ibb.co/dKgZBp8/cpu-cooler.webp",
+        "minimumOrder": "2",
+        "availableQuantity": "100"
+        
         
     }
        

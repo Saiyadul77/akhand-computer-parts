@@ -4,7 +4,7 @@ import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
-import { async } from '@firebase/util';
+// import { async } from '@firebase/util';
 
 const Register = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -19,6 +19,7 @@ const Register = () => {
     const [updateProfile, updating, error2] = useUpdateProfile(auth);
     const navigate = useNavigate();
 
+
     if (loading || loading1 || updating) {
         return <Loading></Loading>
     }
@@ -31,7 +32,7 @@ const Register = () => {
     if (error || error1 || error2) {
         return (
             <div>
-                signInError = <p>Error: {error.message || error1.message}</p>
+                signInError = <p>Error: {error.message || error1.message || error2.message}</p>
             </div>
         );
     }
@@ -41,7 +42,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
         console.log('user updated');
-        navigate ('/parts');
+        navigate ('/inventory');
     }
     return (
         <div className='flex h-screen justify-center items-center'>

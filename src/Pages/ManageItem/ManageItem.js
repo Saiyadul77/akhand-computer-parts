@@ -37,7 +37,7 @@ const ManageItem = () => {
                         <p>Price: ${service.price}</p>
                         <p>Quantity: {service.quantity}</p>
                         <p>Supplier Name:{service.supplier}</p>
-                        <button className='btn btn-primary' onClick={() => handleDelete(service._id)}>Delete Item</button>
+                        <button className='btn btn-primary' onClick={() => handleDelete(service._id)}>Delete Product</button>
                     </div>)
                 }
             </div>

@@ -5,8 +5,11 @@ import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
+
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         signInWithEmailAndPassword,
@@ -15,11 +18,13 @@ const Login = () => {
         error1,
     ] = useSignInWithEmailAndPassword(auth);
 
+    let signInError;
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
+
         if (user || user1) {
             navigate(from, { replace: true });
         }
@@ -29,15 +34,8 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-
-
-    let signInError;
-    if (error || error1) {
-        return (
-            <div>
-                signInError = <p>Error: {error.message || error1.message}</p>
-            </div>
-        );
+    if(error || error1){
+        signInError= <p className='text-red-500'><small>{error?.message || error1.message }</small></p>
     }
 
     const onSubmit = data => {
@@ -113,6 +111,7 @@ const Login = () => {
                     </form>
 
                     <p><small>New to member <Link className='text-primary' to="/register">Create New Account</Link></small></p>
+                    
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}

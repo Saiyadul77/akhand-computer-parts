@@ -10,19 +10,19 @@ const Contact = () => {
             <form>
                 <div className='flex flex-col justify-center items-center gap-2'>
 
-                    <div class="form-control w-full max-w-xs">
-                        <input type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs" required/>
+                    <div className="form-control w-full max-w-xs">
+                        <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs" required/>
                     </div>
-                    <div class="form-control w-full max-w-xs">
-                        <input type="email" placeholder="Your Email" class="input input-bordered w-full max-w-xs" required/>
+                    <div className="form-control w-full max-w-xs">
+                        <input type="email" placeholder="Your Email" className="input input-bordered w-full max-w-xs" required/>
                     </div>
-                    <div class="form-control w-full max-w-xs">
-                        <textarea class="textarea textarea-bordered h-24" placeholder="Your Message" required></textarea>
+                    <div className="form-control w-full max-w-xs">
+                        <textarea className="textarea textarea-bordered h-24" placeholder="Your Message" required></textarea>
                     </div>
-                    <div class="form-control w-full max-w-xs">
-                        <input type="text" placeholder="Your Contact Number" class="input input-bordered w-full max-w-xs" required/>
+                    <div className="form-control w-full max-w-xs">
+                        <input type="text" placeholder="Your Contact Number" className="input input-bordered w-full max-w-xs" required/>
                     </div>
-                    <input type="submit" value="Submit" className='btn btn-primary w-full max-w-xs'/>
+                    <input type="submit" value="Submit" className='btn btn-primary text-white bg-gradient-to-r from-sky-500 to-indigo-500 w-full max-w-xs'/>
                 </div>
             </form>
         </div>

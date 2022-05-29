@@ -12,6 +12,14 @@ import ManageItem from './Pages/ManageItem/ManageItem';
 import Footer from './Pages/Shared/Footer/Footer';
 // import PartsDetail from './Pages/PartsDetail/PartsDetail';
 import Header from './Pages/Shared/Header/Header';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import BuyingModel from './Pages/Home/BuyingModel/BuyingModel';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrder from './Pages/Dashboard/MyOrder';
+import MyReview from './Pages/Dashboard/MyReview';
+
+
 
 function App() {
   return (
@@ -30,13 +38,28 @@ function App() {
             <ManageItem></ManageItem>
           </RequireAuth>
         }></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
+        <Route path='/buying' element={
+          <RequireAuth>
+            <BuyingModel></BuyingModel>
+          </RequireAuth>
+        }></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
+          </RequireAuth>
+        }>
+          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path='review' element={<MyReview></MyReview>}></Route>
+        </Route>
+
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
         <Route path="/about" element={<About />} />
-        <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
         <Route path='/business' element={<BusinessSummary></BusinessSummary>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
