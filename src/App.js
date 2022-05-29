@@ -20,6 +20,7 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import MyReview from './Pages/Dashboard/MyReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Admin/Users';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 
@@ -58,6 +59,8 @@ function App() {
 
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='/blog' element={<Blogs />}></Route>
+        
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/business' element={<BusinessSummary></BusinessSummary>}></Route>
