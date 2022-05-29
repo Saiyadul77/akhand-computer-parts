@@ -13,6 +13,7 @@ const Header = () => {
       };
     const menuItem = <>
         <li><Link to="home">Home</Link></li>
+        <li><Link to="portfolio">Portfolio</Link></li>
         <li><Link to="/inventory">Computer Parts</Link></li>
         <li><Link to="/business">Business Summary</Link></li>
         <li><Link to="/reviews">Reviews</Link></li>

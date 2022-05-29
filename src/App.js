@@ -21,6 +21,7 @@ import MyReview from './Pages/Dashboard/MyReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Admin/Users';
 import Blogs from './Pages/Blogs/Blogs';
+import Portfolio from './Pages/Portfolio/Portfolio';
 
 
 
@@ -60,6 +61,7 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/blog' element={<Blogs />}></Route>
+        <Route path='/portfolio' element={<Portfolio />}></Route>
         
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact />}></Route>
