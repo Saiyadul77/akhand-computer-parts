@@ -25,6 +25,7 @@ import Portfolio from './Pages/Portfolio/Portfolio';
 import NotFound from './Pages/NotFound/NotFound';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import AddItem from './Pages/AddItem/AddItem';
+import Reviews from './Pages/Home/Reviews/Reviews';
 
 
 
@@ -35,11 +36,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path='/inventory/:inventoryId' element={
+        {/* <Route path='/inventory/:inventoryId' element={
           <RequireAuth>
             <InventoryDetail></InventoryDetail>
           </RequireAuth>
-        }></Route>
+        }></Route> */}
         <Route path='/inventory' element={
           <RequireAuth>
             <ManageItem></ManageItem>
@@ -65,6 +66,7 @@ function App() {
 
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='/reviews' element={<Reviews />}></Route>
         <Route path='/blog' element={<Blogs />}></Route>
         <Route path='/portfolio' element={<Portfolio />}></Route>
         
