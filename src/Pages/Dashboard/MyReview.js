@@ -34,10 +34,9 @@ const MyReview = () => {
             <h1 className='text-center mt-3 text-3xl'>Add Your Review</h1>
             <div className='justify-center items-center ml-40 '>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2 input w-full max-w-xs' disabled value={user?.displayName || ''} {...register("name")} /> <br />
-                <input className='mb-2 input w-full max-w-xs' disabled value={user?.email || ''} type="email" {...register("price")} /> <br />
-                <textarea className='mb-2 input w-full max-w-xs' placeholder='Write your Review'{...register("review")} /> <br />
-                
+                <input className='mb-2 input w-full max-w-xs' disabled value={user?.displayName || ''} placeholder='Your Name'{...register("name", { required: true })} /> <br />
+                <input className='mb-2 input w-full max-w-xs' disabled value={user?.email || ''} placeholder='Your Email' type="email" {...register("email")} /> <br />
+                <textarea className='mb-2 input w-full max-w-xs' placeholder='Write your review'{...register("description")} /> <br />
                 <input className='text-white bg-primary input w-full max-w-xs' type="submit" value="Add Review" />
             </form>
             </div>
