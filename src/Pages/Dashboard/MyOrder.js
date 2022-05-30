@@ -18,7 +18,7 @@ const MyOrder = () => {
         }
       })
         .then(res => {
-          console.log('res', res);
+          // console.log('res', res);
           if (res.status === 401 || res.status === 403) {
             signOut(auth);
             localStorage.removeItem('accessToken');
@@ -33,8 +33,8 @@ const MyOrder = () => {
   return (
     <div>
       <h1>This is my order page: {order.length}</h1>
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           {/* <!-- head --> */}
           <thead>
             <tr>
