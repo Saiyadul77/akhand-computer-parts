@@ -34,7 +34,7 @@ const MyReview = () => {
             <h1 className='text-center mt-3 text-3xl'>Add Your Review</h1>
             <div className='justify-center items-center ml-40 '>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2 input w-full max-w-xs' disabled value={user?.email || ''} {...register("name")} /> <br />
+                <input className='mb-2 input w-full max-w-xs' disabled value={user?.displayName || ''} {...register("name")} /> <br />
                 <input className='mb-2 input w-full max-w-xs' disabled value={user?.email || ''} type="email" {...register("price")} /> <br />
                 <textarea className='mb-2 input w-full max-w-xs' placeholder='Write your Review'{...register("review")} /> <br />
                 
