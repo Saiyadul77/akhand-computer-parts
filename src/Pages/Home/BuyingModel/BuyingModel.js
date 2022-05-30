@@ -11,7 +11,7 @@ const BuyingModel = ({ product, setProduct }) => {
     const handleBuying = event => {
         event.preventDefault();
         const order = event.target.order.value;
-        const address= event.target.address.value;
+        // const address= event.target.address.value;
 
         const totalPrice = price * order;
         const balance = availableQuantity - order;
@@ -22,7 +22,7 @@ const BuyingModel = ({ product, setProduct }) => {
             order,
             totalPrice,
             balance,
-            address,
+            // address,
             customerEmail: user.email,
             customerName: user.displayName,
             phone: event.target.phone.value
@@ -55,7 +55,7 @@ const BuyingModel = ({ product, setProduct }) => {
                         <input type="text" name='name' disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="email" name='email' disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='phone' placeholder="Your Phone Number" className="input input-bordered w-full max-w-xs" required />
-                        <input type="text" name='address' placeholder="Your Address" className="input input-bordered w-full max-w-xs" required />
+                        {/* <input type="text" name='address' placeholder="Your Address" className="input input-bordered w-full max-w-xs" required /> */}
                         <div className='flex w-full max-w-xs'>
                             <label className="label">
                                 <span className="label-text">Available Quantity:</span>
