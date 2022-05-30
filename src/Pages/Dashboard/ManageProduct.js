@@ -23,9 +23,11 @@ const ManageProduct = () => {
     return (
         <div className='m-5'>
             <h1 className='text-center text-primary mt-5 text-3xl'>Total Inventory Product: {services.length}</h1>
+            <div className='my-10 flex justify-center items-center'>
             <Link to="/dashboard/addItem">
-                <button className='btn btn-primary w-100 mx-auto'>Add More Item</button>
+                <button className='text-white bg-gradient-to-r from-sky-500 to-indigo-500 btn btn-primary w-full max-w-xs'>Add More Item</button>
             </Link>
+            </div>
             <div className='items-container'>
                 {
                     services.map(service => <div key={service._id}>
@@ -35,7 +37,7 @@ const ManageProduct = () => {
                         <p>Price: ${service.price}</p>
                         <p>Quantity: {service.quantity}</p>
                         
-                        <button className='btn btn-primary' onClick={() => handleDelete(service._id)}>Delete Product</button>
+                        <button className='text-white bg-gradient-to-r from-sky-500 to-indigo-500 btn btn-primary w-full max-w-xs' onClick={() => handleDelete(service._id)}>Delete Product</button>
                     </div>)
                 }
             </div>

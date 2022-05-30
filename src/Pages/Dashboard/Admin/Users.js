@@ -19,18 +19,23 @@ const Users = () => {
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
-                        <tr>
+                        <tr className=''>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Email</th>
+                            <th>Product</th>
+                            <th>Product Quantity</th>
+                            <th>Price</th>
+                            <th>Payment Status</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
                        {
-                           users.map(user=><User
+                           users.map((user, index)=><User
                            key={user._id}
                            user={user}
+                           index={index}
                            refetch={refetch}
                            ></User>)
                        }

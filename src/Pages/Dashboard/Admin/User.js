@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const User = ({ user, refetch }) => {
+const User = ({ user, refetch, index }) => {
     const { email, role } = user;
     const makeAdmin = () => {
         fetch(`https://secret-fjord-21413.herokuapp.com/user/admin/${email}`, {
@@ -26,8 +26,10 @@ const User = ({ user, refetch }) => {
     return (
         <div>
            <tr>
-            <th>1</th>
+            <th>{index + 1}</th>
+            <td>{role}</td>
             <td>{email}</td>
+            
             <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td>
             <td><button class="btn btn-xs">Remove User</button></td>
         </tr> 
