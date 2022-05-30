@@ -49,7 +49,7 @@ const MyOrder = () => {
           <tbody>
 
             {
-              order.map((e, index) => <tr>
+              order.map((e, index) => <tr key={e._id}>
                 <th>{index + 1}</th>
                 <td>{e.customerName}</td>
                 <td>{e.customerEmail}</td>
