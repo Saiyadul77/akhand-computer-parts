@@ -23,7 +23,7 @@ const ManageProduct = () => {
     return (
         <div className='m-5'>
             <h1 className='text-center text-primary mt-5 text-3xl'>Total Inventory Product: {services.length}</h1>
-            <Link to={`/addItem`}>
+            <Link to="/dashboard/addItem">
                 <button className='btn btn-primary w-100 mx-auto'>Add More Item</button>
             </Link>
             <div className='items-container'>
@@ -34,7 +34,7 @@ const ManageProduct = () => {
                         <p>{service.description}</p>
                         <p>Price: ${service.price}</p>
                         <p>Quantity: {service.quantity}</p>
-                        <p>Supplier Name:{service.supplier}</p>
+                        
                         <button className='btn btn-primary' onClick={() => handleDelete(service._id)}>Delete Product</button>
                     </div>)
                 }
