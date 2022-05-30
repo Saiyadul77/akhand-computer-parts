@@ -1,9 +1,42 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const MyReview = () => {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data)
+
+        const url = `https://secret-fjord-21413.herokuapp.com/review`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },    // coma na deoar karone lal bati dekhaise
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                if(result.insertedId){
+                    toast('Additing your Review!!');
+                    
+                }
+            })
+            
+
+    };
     return (
-        <div>
-            <h1>This is my review</h1>
+        <div className=''>
+            <h1 className='text-center mt-3 text-3xl'>Add Your Review</h1>
+            <div className='justify-center items-center ml-40 '>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input className='mb-2 input w-full max-w-xs' placeholder='Your Name'{...register("name", { required: true })} /> <br />
+                <input className='mb-2 input w-full max-w-xs' placeholder='Your Email' type="email" {...register("email")} /> <br />
+                <textarea className='mb-2 input w-full max-w-xs' placeholder='Write your Review'{...register("description")} /> <br />
+                <input className='text-white bg-primary input w-full max-w-xs' type="submit" value="Add Review" />
+            </form>
+            </div>
         </div>
     );
 };
